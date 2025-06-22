@@ -20,7 +20,8 @@ export async function POST(request: NextRequest) {
     await connectToDatabase()
     
     // Check if user has active premium entitlement
-    const hasPremium = customerInfo.entitlements?.premium?.isActive || false
+    const hasPremium = customerInfo.entitlements?.active?.premium?.isActive || 
+                       customerInfo.entitlements?.premium?.is_active || false
     
     // Update user subscription status
     const updatedUser = await User.findByIdAndUpdate(

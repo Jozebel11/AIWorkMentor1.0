@@ -6,6 +6,7 @@ import { Loader2, Crown } from 'lucide-react'
 import { useRevenueCat } from './RevenueCatProvider'
 import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
+import type { PurchasesPackage } from '@revenuecat/purchases-js'
 
 interface PurchaseButtonProps {
   packageId?: string
@@ -41,7 +42,7 @@ export function PurchaseButton({ packageId = 'premium_monthly', className, child
       
       if (customerInfo) {
         // Check if purchase was successful
-        const hasPremium = customerInfo.entitlements?.premium?.isActive
+        const hasPremium = customerInfo.entitlements?.active?.premium?.isActive
         
         if (hasPremium) {
           toast.success('Welcome to Premium! 🎉')

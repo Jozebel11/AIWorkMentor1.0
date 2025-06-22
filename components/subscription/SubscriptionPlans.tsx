@@ -12,7 +12,7 @@ export function SubscriptionPlans() {
   const { offerings, customerInfo, isLoading, restorePurchases } = useRevenueCat()
   const { data: session } = useSession()
 
-  const isPremium = customerInfo?.entitlements?.premium?.isActive || false
+  const isPremium = customerInfo?.entitlements?.active?.premium?.isActive || false
 
   const features = [
     'Access to all prompt examples and templates',
@@ -104,7 +104,7 @@ export function SubscriptionPlans() {
             </CardTitle>
             <CardDescription>Everything you need to thrive with AI</CardDescription>
             <div className="text-3xl font-bold">
-              {monthlyPackage?.product.priceString || '$19'}
+              {monthlyPackage?.product.priceString || '$19.99'}
               <span className="text-lg font-normal text-muted-foreground">/month</span>
             </div>
             {yearlyPackage && (
