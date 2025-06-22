@@ -2,8 +2,8 @@ import { SignInForm } from '@/components/auth/SignInForm'
 import { Suspense } from 'react'
 
 export const metadata = {
-  title: 'Sign In - ThriveWithAI',
-  description: 'Sign in to your ThriveWithAI account to access premium AI productivity content.',
+  title: 'Sign In - AIWorkMentor',
+  description: 'Sign in to your AIWorkMentor account to access premium AI productivity content.',
 }
 
 export default function SignInPage() {

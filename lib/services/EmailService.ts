@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 
 export class EmailService {
-  private static transporter = nodemailer.createTransport({
+  private static transporter = nodemailer.createTransporter({
     host: process.env.SMTP_HOST || 'smtp.gmail.com',
     port: parseInt(process.env.SMTP_PORT || '587'),
     secure: false,
@@ -54,7 +54,7 @@ export class EmailService {
         </div>
 
         <div style="border-top: 1px solid #dee2e6; padding-top: 20px; margin-top: 30px; color: #6c757d; font-size: 12px;">
-          <p>This email was sent automatically from ThriveWithAI feedback system.</p>
+          <p>This email was sent automatically from AIWorkMentor feedback system.</p>
           <p>Submitted on: ${new Date(feedback.createdAt).toLocaleString()}</p>
         </div>
       </div>
@@ -62,8 +62,8 @@ export class EmailService {
 
     try {
       await this.transporter.sendMail({
-        from: process.env.SMTP_FROM || 'noreply@thrivewith.ai',
-        to: process.env.ADMIN_EMAIL || 'admin@thrivewith.ai',
+        from: process.env.SMTP_FROM || 'noreply@aiworkmentor.com',
+        to: process.env.ADMIN_EMAIL || 'admin@aiworkmentor.com',
         subject,
         html
       })
@@ -107,11 +107,11 @@ export class EmailService {
         </div>
 
         <div style="border-top: 1px solid #dee2e6; padding-top: 20px; margin-top: 30px; color: #6c757d; font-size: 14px;">
-          <p>Thank you for helping us improve ThriveWithAI!</p>
+          <p>Thank you for helping us improve AIWorkMentor!</p>
           <p>If you have any questions, feel free to reply to this email.</p>
           <p style="margin-top: 20px;">
             Best regards,<br>
-            The ThriveWithAI Team
+            The AIWorkMentor Team
           </p>
         </div>
       </div>
@@ -119,7 +119,7 @@ export class EmailService {
 
     try {
       await this.transporter.sendMail({
-        from: process.env.SMTP_FROM || 'support@thrivewith.ai',
+        from: process.env.SMTP_FROM || 'support@aiworkmentor.com',
         to: feedback.userEmail,
         subject,
         html

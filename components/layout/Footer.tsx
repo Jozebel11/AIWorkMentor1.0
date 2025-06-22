@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="border-t bg-muted/40">
       <div className="container flex flex-col gap-8 py-12 md:flex-row">
         <div className="flex flex-col gap-2">
-          <h3 className="text-lg font-semibold">ThriveWithAI</h3>
+          <h3 className="text-lg font-semibold">AIWorkMentor</h3>
           <p className="max-w-xs text-sm text-muted-foreground">
             Empowering professionals to embrace AI tools and thrive in the future of work. Learn, adapt, and succeed with artificial intelligence.
           </p>
@@ -85,7 +85,7 @@ export default function Footer() {
       
       <div className="container flex flex-col items-center justify-between gap-4 border-t py-6 md:h-16 md:flex-row md:py-0">
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-          © {new Date().getFullYear()} ThriveWithAI. All rights reserved.
+          © {new Date().getFullYear()} AIWorkMentor. All rights reserved.
         </p>
         <div className="flex items-center gap-4 text-muted-foreground">
           <Link href="#" className="hover:text-foreground transition-colors">

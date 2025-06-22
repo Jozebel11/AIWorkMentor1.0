@@ -15,6 +15,23 @@ export interface IUser extends Document {
   emailVerified: boolean
   resetPasswordToken?: string
   resetPasswordExpires?: Date
+  preferences?: {
+    notifications?: {
+      emailNotifications: boolean
+      pushNotifications: boolean
+      weeklyDigest: boolean
+      productUpdates: boolean
+    }
+    privacy?: {
+      profileVisibility: 'public' | 'private' | 'friends'
+      activityTracking: boolean
+      dataCollection: boolean
+    }
+    appearance?: {
+      theme: 'light' | 'dark' | 'system'
+      language: string
+    }
+  }
   oauth?: {
     google?: {
       id: string
@@ -80,6 +97,31 @@ const UserSchema = new Schema<IUser>({
   },
   resetPasswordExpires: {
     type: Date
+  },
+  preferences: {
+    notifications: {
+      emailNotifications: { type: Boolean, default: true },
+      pushNotifications: { type: Boolean, default: false },
+      weeklyDigest: { type: Boolean, default: true },
+      productUpdates: { type: Boolean, default: true }
+    },
+    privacy: {
+      profileVisibility: { 
+        type: String, 
+        enum: ['public', 'private', 'friends'], 
+        default: 'private' 
+      },
+      activityTracking: { type: Boolean, default: true },
+      dataCollection: { type: Boolean, default: true }
+    },
+    appearance: {
+      theme: { 
+        type: String, 
+        enum: ['light', 'dark', 'system'], 
+        default: 'system' 
+      },
+      language: { type: String, default: 'en' }
+    }
   },
   oauth: {
     google: {

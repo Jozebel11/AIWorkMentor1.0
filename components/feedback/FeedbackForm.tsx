@@ -162,7 +162,7 @@ export function FeedbackForm({ relatedJob, relatedTool, onSuccess }: FeedbackFor
           Share Your Feedback
         </CardTitle>
         <CardDescription>
-          Help us improve ThriveWithAI by sharing your thoughts, reporting issues, or requesting new content.
+          Help us improve AIWorkMentor by sharing your thoughts, reporting issues, or requesting new content.
         </CardDescription>
       </CardHeader>
       <CardContent>

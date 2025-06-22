@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge'
 import { MessageSquare, Star, Bug, Lightbulb, FileText, AlertTriangle } from 'lucide-react'
 
 export const metadata = {
-  title: 'Feedback & Reviews - ThriveWithAI',
+  title: 'Feedback & Reviews - AIWorkMentor',
   description: 'Share your feedback, report issues, request content, and read reviews from other users.',
 }
 
@@ -51,7 +51,7 @@ export default function FeedbackPage() {
             Community Feedback
           </Badge>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Help Us Improve ThriveWithAI
+            Help Us Improve AIWorkMentor
           </h1>
           <p className="mt-4 text-xl text-muted-foreground max-w-3xl mx-auto">
             Your feedback drives our development. Share your experience, report issues, 
@@ -94,7 +94,7 @@ export default function FeedbackPage() {
                   Recent Reviews
                 </CardTitle>
                 <CardDescription>
-                  See what other users are saying about ThriveWithAI
+                  See what other users are saying about AIWorkMentor
                 </CardDescription>
               </CardHeader>
               <CardContent>

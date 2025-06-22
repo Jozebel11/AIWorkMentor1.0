@@ -10,38 +10,38 @@ import Footer from '@/components/layout/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'ThriveWithAI - Master AI Tools for Career Success | AI Productivity Training',
+  title: 'AIWorkMentor - Master AI Tools for Career Success | AI Productivity Training',
   description: 'Learn how to thrive with AI tools instead of fearing job displacement. Comprehensive guides, tutorials, and resources to boost your productivity and advance your career using artificial intelligence.',
-  keywords: 'AI tools, artificial intelligence training, career development, productivity, job skills, AI education, workplace AI, professional development',
-  authors: [{ name: 'ThriveWithAI Team' }],
-  creator: 'ThriveWithAI',
-  publisher: 'ThriveWithAI',
+  keywords: 'AI tools, artificial intelligence training, career development, productivity, job skills, AI education, workplace AI, professional development, AI mentor, work mentor',
+  authors: [{ name: 'AIWorkMentor Team' }],
+  creator: 'AIWorkMentor',
+  publisher: 'AIWorkMentor',
   robots: 'index, follow',
   metadataBase: new URL('http://localhost:3000'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://thrivewith.ai',
-    siteName: 'ThriveWithAI',
-    title: 'ThriveWithAI - Master AI Tools for Career Success',
+    url: 'https://aiworkmentor.com',
+    siteName: 'AIWorkMentor',
+    title: 'AIWorkMentor - Master AI Tools for Career Success',
     description: 'Learn how to thrive with AI tools instead of fearing job displacement. Comprehensive guides and resources for AI-powered productivity.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'ThriveWithAI - Master AI Tools for Career Success',
+        alt: 'AIWorkMentor - Master AI Tools for Career Success',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ThriveWithAI - Master AI Tools for Career Success',
+    title: 'AIWorkMentor - Master AI Tools for Career Success',
     description: 'Learn how to thrive with AI tools instead of fearing job displacement.',
-    creator: '@ThriveWithAI',
+    creator: '@AIWorkMentor',
   },
   alternates: {
-    canonical: 'https://thrivewith.ai',
+    canonical: 'https://aiworkmentor.com',
   },
 }
 

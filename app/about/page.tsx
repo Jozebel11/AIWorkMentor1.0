@@ -6,8 +6,8 @@ import { Heart, Target, Users, Lightbulb, Zap, Code, Globe, BookOpen } from "luc
 import Link from "next/link"
 
 export const metadata = {
-  title: "About ThriveWithAI - Our Mission to Empower Professionals with AI",
-  description: "Learn about ThriveWithAI's mission to help professionals embrace AI tools for career growth. Discover our story, values, and how this platform was built with cutting-edge AI technology.",
+  title: "About AIWorkMentor - Our Mission to Empower Professionals with AI",
+  description: "Learn about AIWorkMentor's mission to help professionals embrace AI tools for career growth. Discover our story, values, and how this platform was built with cutting-edge AI technology.",
 }
 
 export default function AboutPage() {
@@ -64,7 +64,7 @@ export default function AboutPage() {
       <div className="mx-auto max-w-4xl">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <Badge variant="secondary" className="mb-4">About ThriveWithAI</Badge>
+          <Badge variant="secondary" className="mb-4">About AIWorkMentor</Badge>
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl mb-6">
             Empowering Professionals to Thrive in the AI Era
           </h1>
@@ -114,7 +114,7 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="prose prose-sm max-w-none dark:prose-invert">
             <p>
-              ThriveWithAI was born from a simple observation: while AI tools were becoming incredibly powerful 
+              AIWorkMentor was born from a simple observation: while AI tools were becoming incredibly powerful 
               and accessible, most professionals were either unaware of their potential or afraid to use them.
             </p>
             <p>
@@ -169,7 +169,7 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="prose prose-sm max-w-none dark:prose-invert">
             <p>
-              <strong>ThriveWithAI was built using bolt.new</strong>, an AI-powered development platform that 
+              <strong>AIWorkMentor was built using bolt.new</strong>, an AI-powered development platform that 
               demonstrates exactly what we teach—how AI can amplify human capabilities rather than replace them.
             </p>
             

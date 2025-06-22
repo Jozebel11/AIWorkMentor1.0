@@ -1,8 +1,8 @@
 import { SignUpForm } from '@/components/auth/SignUpForm'
 
 export const metadata = {
-  title: 'Sign Up - ThriveWithAI',
-  description: 'Create your ThriveWithAI account to access premium AI productivity content and tools.',
+  title: 'Sign Up - AIWorkMentor',
+  description: 'Create your AIWorkMentor account to access premium AI productivity content and tools.',
 }
 
 export default function SignUpPage() {

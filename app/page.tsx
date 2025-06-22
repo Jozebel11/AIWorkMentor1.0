@@ -8,7 +8,7 @@ import { TrendingUp, Users, BookOpen, Zap } from "lucide-react"
 import Link from "next/link"
 
 export const metadata = {
-  title: 'ThriveWithAI - Master AI Tools for Career Success | AI Productivity Training',
+  title: 'AIWorkMentor - Master AI Tools for Career Success | AI Productivity Training',
   description: 'Learn how to thrive with AI tools instead of fearing job displacement. Comprehensive guides, tutorials, and resources to boost your productivity and advance your career using artificial intelligence.',
 }
 
@@ -71,7 +71,7 @@ export default function Home() {
       <section className="py-12 md:py-16">
         <div className="container">
           <div className="mb-8 text-center">
-            <h2 className="text-3xl font-bold tracking-tight">How ThriveWithAI Works</h2>
+            <h2 className="text-3xl font-bold tracking-tight">How AIWorkMentor Works</h2>
             <p className="mt-2 text-muted-foreground">
               Our step-by-step approach to mastering AI tools for your profession
             </p>
@@ -165,7 +165,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground">
-                  "ThriveWithAI taught me how to use AI for content creation and data analysis. 
+                  "AIWorkMentor taught me how to use AI for content creation and data analysis. 
                   I now create campaigns in hours instead of days, and my results have never been better."
                 </p>
               </CardContent>

@@ -4,7 +4,7 @@ import { CheckCircle, ArrowLeft, MessageSquare } from 'lucide-react'
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Feedback Submitted - ThriveWithAI',
+  title: 'Feedback Submitted - AIWorkMentor',
   description: 'Thank you for your feedback! We\'ll review it and get back to you soon.',
 }
 

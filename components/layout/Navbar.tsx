@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button'
 import { SearchBar } from '@/components/ui/search-bar'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
-import { MoonIcon, SunIcon, Menu, User, Settings, LogOut } from 'lucide-react'
+import { MoonIcon, SunIcon, Menu, User, Settings, LogOut, Crown } from 'lucide-react'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -42,13 +42,16 @@ export default function Navbar() {
     return name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2)
   }
 
+  const isPremium = session?.user?.subscriptionTier === 'premium' && 
+                   session?.user?.subscriptionStatus === 'active'
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2 text-xl font-bold">
-            <span className="hidden sm:inline-block">ThriveWithAI</span>
-            <span className="inline-block sm:hidden">TWA</span>
+            <span className="hidden sm:inline-block">AIWorkMentor</span>
+            <span className="inline-block sm:hidden">AWM</span>
           </Link>
         </div>
         
@@ -122,7 +125,12 @@ export default function Navbar() {
               <DropdownMenuContent className="w-56" align="end" forceMount>
                 <div className="flex items-center justify-start gap-2 p-2">
                   <div className="flex flex-col space-y-1 leading-none">
-                    <p className="font-medium">{session.user?.name}</p>
+                    <div className="flex items-center gap-2">
+                      <p className="font-medium">{session.user?.name}</p>
+                      {isPremium && (
+                        <Crown className="h-3 w-3 text-yellow-600" />
+                      )}
+                    </div>
                     <p className="w-[200px] truncate text-sm text-muted-foreground">
                       {session.user?.email}
                     </p>
@@ -141,6 +149,14 @@ export default function Navbar() {
                     Settings
                   </Link>
                 </DropdownMenuItem>
+                {!isPremium && (
+                  <DropdownMenuItem asChild>
+                    <Link href="/subscription/upgrade">
+                      <Crown className="mr-2 h-4 w-4" />
+                      Upgrade to Premium
+                    </Link>
+                  </DropdownMenuItem>
+                )}
                 <DropdownMenuSeparator />
                 <DropdownMenuItem onClick={handleSignOut}>
                   <LogOut className="mr-2 h-4 w-4" />
@@ -174,7 +190,7 @@ export default function Navbar() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col gap-4">
                 <Link href="/" className="text-lg font-bold">
-                  ThriveWithAI
+                  AIWorkMentor
                 </Link>
                 
                 <div className="mb-4">
