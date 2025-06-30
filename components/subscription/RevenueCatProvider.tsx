@@ -2,7 +2,8 @@
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 import { useSession } from 'next-auth/react'
-import Purchases, { 
+import * as Purchases from '@revenuecat/purchases-js'
+import type { 
   PurchasesOffering, 
   PurchasesPackage, 
   CustomerInfo,
